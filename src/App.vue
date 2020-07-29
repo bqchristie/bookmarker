@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app" @keyup.esc="handleEscape()">
+        <BookMarks/>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    import BookMarks from './components/BookMarks.vue'
+    import {EventBus} from './event-bus';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'App',
+        components: {
+            BookMarks
+        },
+        methods: {
+            handleEscape() {
+                EventBus.$emit('escape-clicked')
+            }
+        }
+    }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+    @import "scss/index";
+    #app {
+        background-color: $app-background-color;
+        padding: 20px;
+        width:60%;
+        @media all and (max-width: 480px) {
+            width: 90%;
+        }
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+
 </style>

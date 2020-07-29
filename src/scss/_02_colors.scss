@@ -1,0 +1,21 @@
+$black: #181818;
+$black-30: lighten($black,70%);
+$white: #fefefe;
+$light-grey: #c2bdbd;
+$dark-red: darkred;
+$lightcoral: lightcoral;
+$lightsalmon: lightsalmon;
+
+/*
+Try to use these colors instead of the above colors directly;
+ */
+$body-background-color: $light-grey;
+$app-background-color: $black;
+$primary-text-color: $black;
+$input-border-color: $black-30;
+$error-color: $dark-red;
+$link-color:  $lightcoral;
+$link-hover-color:  $lightsalmon;
+$modal-content-background-color: $white;
+$place-holder-color: $light-grey;
+

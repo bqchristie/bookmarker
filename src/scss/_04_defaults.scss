@@ -1,0 +1,45 @@
+body {
+  background-color: $body-background-color;
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+
+input {
+  border: 1px solid $input-border-color;
+  padding-left: 10px;
+}
+
+::placeholder {
+  color: $place-holder-color;
+}
+
+a {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: $link-color;
+  &:hover {
+    color: $link-hover-color;
+  };
+}
+
+img {
+  &.btn {
+    height: 30px;
+    width:30px;
+    margin-right: 10px;
+    filter:opacity(30%);
+    &:hover {
+      cursor: pointer;
+      filter:none;
+
+    }
+  }
+}
