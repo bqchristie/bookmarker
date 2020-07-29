@@ -25,7 +25,8 @@
     @import "scss/index";
     #app {
         background-color: $app-background-color;
-        padding: 20px;
+        box-shadow: 0px 0px 56px -9px rgba(0,0,0,0.75);
+        padding: 8px;
         width:60%;
         @media all and (max-width: 480px) {
             width: 90%;
